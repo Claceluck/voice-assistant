@@ -1,0 +1,17 @@
+# IDEs and environments
+.idea/
+.venv/
+**/.vscode/
+
+# Node modules and Angular build artifacts
+**/node_modules/
+**/.angular/
+
+# Python/Django environments and build artifacts
+**/.env
+**/dist/
+**/models/
+
+# Test and dataset folders
+voice-assistent-test/cv-corpus-21.0-delta-2025-03-14/
+voice-assistent/apps/backend/uploads/
