@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:14
+    container_name: autobiography-db
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: autobiography_user
+      POSTGRES_PASSWORD: secretpassword
+      POSTGRES_DB: autobiography
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

@@ -1,0 +1,67 @@
+.prologue {
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 1rem;
+
+  &__user-select {
+
+  }
+
+  .instruction {
+    background: #f0f4ff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  .recorder {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #007acc;
+      color: white;
+
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .raw-text, .formatted-text, .questions {
+    background-color: #f9f9f9;
+    border-left: 4px solid #007acc;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

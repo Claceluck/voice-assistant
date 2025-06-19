@@ -1,0 +1,43 @@
+<div class="prologue">
+<!--  <div class="prologue__user-select">-->
+<!--    <label for="user-select">Выберите пользователя:</label>-->
+<!--    <select id="user-select" (change)="onUserChange($event)" [value]="selectedUserId">-->
+<!--      <option *ngFor="let user of users" [value]="user.id">{{ user.email }}</option>-->
+<!--    </select>-->
+<!--  </div>-->
+
+  <div class="instruction">
+    <h2>Пролог</h2>
+    <p>
+      Чтобы начать, расскажите немного о себе. Ответьте устно на следующие вопросы:
+    </p>
+    <ul>
+      <li>Как вас зовут?</li>
+      <li>Сколько вам лет?</li>
+      <li>Из какого вы города?</li>
+      <li>Почему вы решили написать автобиографию?</li>
+    </ul>
+  </div>
+
+  <div class="recorder">
+    <button (click)="startRecording()" [disabled]="isRecording">🎙 Начать запись</button>
+    <button (click)="stopRecording()" [disabled]="!isRecording">⏹ Остановить</button>
+  </div>
+
+  <div class="raw-text" *ngIf="rawText">
+    <h3>Текст дло обработки</h3>
+    <pre>{{ rawText }}</pre>
+  </div>
+
+  <div class="formatted-text" *ngIf="formattedText">
+    <h3>Литературная версия</h3>
+    <p>{{ formattedText }}</p>
+  </div>
+
+  <div class="questions" *ngIf="followUpQuestions?.length">
+    <h3>Уточняющие вопросы</h3>
+    <ul>
+      <li *ngFor="let question of followUpQuestions">{{ question }}</li>
+    </ul>
+  </div>
+</div>
